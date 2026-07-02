@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omar-electrician.github.io/electrical-website/sitemap.xml
