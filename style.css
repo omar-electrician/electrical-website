@@ -170,4 +170,34 @@ nav{
     font-size:20px;
 }
 
+/* معرض الأعمال */
+
+#gallery{
+    padding:60px 20px;
+    background:#f8f8f8;
+    text-align:center;
+}
+
+#gallery h2{
+    margin-bottom:30px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
