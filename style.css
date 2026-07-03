@@ -2,26 +2,30 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Tahoma, Arial, sans-serif;
+}
+
+html{
     scroll-behavior:smooth;
-    font-family:Tahoma,sans-serif;
 }
 
 body{
-    background:#f7f7f7;
+    direction:rtl;
+    background:#f5f5f5;
     color:#222;
-    line-height:1.8;
 }
 
+/* Header */
+
 header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#111;
+    background:#0d3b8e;
     color:#fff;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 8%;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
     z-index:1000;
 }
 
@@ -29,21 +33,26 @@ header{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:22px;
+}
+
+.logo h2{
+    font-size:42px;
 }
 
 .logo i{
     color:#ffd000;
+    font-size:36px;
 }
 
 nav{
     display:flex;
-    gap:20px;
+    gap:40px;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
+    font-size:28px;
     font-weight:bold;
 }
 
@@ -51,114 +60,175 @@ nav a:hover{
     color:#ffd000;
 }
 
-section{
-    padding:100px 8% 60px;
-}
+/* Hero */
 
 .hero{
-    min-height:100vh;
+    min-height:520px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
+    background:linear-gradient(#305aa5,#355ea8);
+    color:white;
 }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.hero h3{
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:20px;
+.hero-text h1{
+    font-size:90px;
     margin-bottom:25px;
+}
+
+.hero-text h3{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.hero-text p{
+    font-size:24px;
+    margin-bottom:40px;
 }
 
 .btn{
     display:inline-block;
-    background:#25D366;
-    color:#fff;
-    padding:12px 25px;
-    border-radius:8px;
+    background:#ffc400;
+    color:black;
     text-decoration:none;
+    padding:20px 45px;
+    border-radius:10px;
+    font-size:28px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-    opacity:.9;
+    background:#ffda4d;
 }
+
+/* Sections */
+
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:55px;
+    margin-bottom:40px;
+    color:#0d3b8e;
+}
+
+section p{
+    font-size:24px;
+    line-height:2;
+    text-align:center;
+}
+
+/* Services */
 
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    margin-top:30px;
+    gap:30px;
+    margin-top:40px;
 }
 
 .service{
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
+    background:white;
+    border-radius:12px;
+    padding:35px;
     text-align:center;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .service i{
-    font-size:40px;
-    margin-bottom:15px;
-    color:#f4b400;
+    font-size:55px;
+    color:#0d3b8e;
+    margin-bottom:20px;
 }
+
+.service h3{
+    font-size:28px;
+}
+
+/* Gallery */
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
-    margin-top:30px;
 }
 
 .gallery img{
     width:100%;
-    height:250px;
-    object-fit:cover;
     border-radius:10px;
     cursor:pointer;
     transition:.3s;
 }
 
 .gallery img:hover{
-    transform:scale(1.05);
+    transform:scale(1.04);
 }
 
-footer{
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
+/* Contact */
+
+#contact ul{
+    max-width:500px;
+    margin:30px auto;
+    font-size:22px;
+    line-height:2;
 }
+
+#contact p{
+    margin:15px 0;
+}
+
+/* Footer */
+
+footer{
+    background:#0d3b8e;
+    color:white;
+    text-align:center;
+    padding:30px;
+    font-size:22px;
+}
+
+/* Mobile */
 
 @media(max-width:768px){
 
 header{
     flex-direction:column;
-    gap:15px;
+    gap:20px;
 }
 
 nav{
     flex-wrap:wrap;
     justify-content:center;
+    gap:20px;
 }
 
-.hero h1{
-    font-size:34px;
+.logo h2{
+    font-size:30px;
 }
 
-.hero h3{
+.hero-text h1{
+    font-size:55px;
+}
+
+.hero-text h3{
+    font-size:25px;
+}
+
+.hero-text p{
+    font-size:20px;
+}
+
+.btn{
     font-size:22px;
 }
 
+section h2{
+    font-size:40px;
 }
+
+}
+
