@@ -24,7 +24,7 @@ const images = [
 "images/e8105684-8aeb-4817-b6e8-909f6ab436dc.jpg",
 "images/WhatsApp Image 2026-06-28 at 10.57.19 PM.jpeg",
 "images/WhatsApp Image 2026-06-28 at 8.11.22 PM.jpeg",
-"images/WhatsApp Image 2026-06-28 at 8.18.58 PM (1).jpeg"
+"images/WhatsApp Image 2026-06-28 at 8.18.58 PM (1).jpeg"    
 ];
 
 const gallery = document.getElementById("galleryContainer");
