@@ -138,38 +138,6 @@ section h2{
     margin-bottom:10px;
 }
 
-#contact{
-    text-align:center;
-}
-
-footer{
-    background:#0b3d91;
-    color:#fff;
-    text-align:center;
-    padding:25px;
-    margin-top:50px;
-}
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.hero h1{
-    font-size:36px;
-}
-
-.hero h3{
-    font-size:20px;
-}
-
 /* معرض الأعمال */
 
 #gallery{
@@ -201,3 +169,42 @@ nav{
 .gallery img:hover{
     transform:scale(1.05);
 }
+
+#contact{
+    text-align:center;
+}
+
+footer{
+    background:#0b3d91;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero h3{
+        font-size:20px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+}
+
