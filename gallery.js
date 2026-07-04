@@ -29,8 +29,40 @@ const images = [
 
 const gallery = document.getElementById("galleryContainer");
 
-images.forEach(img => {
-    gallery.innerHTML += `
-        <img src="${img}" alt="أعمال كهربائي عمر" loading="lazy">
-    `;
+images.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "أعمال كهربائي عمر";
+    img.loading = "lazy";
+    img.style.cursor = "pointer";
+
+    img.addEventListener("click", function () {
+        const win = window.open("", "_blank");
+        win.document.write(`
+            <html>
+            <head>
+            <title>أعمال كهربائي عمر</title>
+            <style>
+                body{
+                    margin:0;
+                    background:#000;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    height:100vh;
+                }
+                img{
+                    max-width:95%;
+                    max-height:95%;
+                }
+            </style>
+            </head>
+            <body>
+                <img src="${src}">
+            </body>
+            </html>
+        `);
+    });
+
+    gallery.appendChild(img);
 });
