@@ -29,6 +29,62 @@ const images = [
 
 const gallery = document.getElementById("galleryContainer");
 
+// إنشاء نافذة التكبير مرة واحدة
+const overlay = document.createElement("div");
+overlay.style.cssText = `
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+cursor:pointer;
+`;
+
+const bigImg = document.createElement("img");
+bigImg.style.cssText = `
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+box-shadow:0 0 25px rgba(255,255,255,.3);
+`;
+
+const closeBtn = document.createElement("span");
+closeBtn.innerHTML = "&times;";
+closeBtn.style.cssText = `
+position:absolute;
+top:20px;
+right:30px;
+color:#fff;
+font-size:45px;
+font-weight:bold;
+cursor:pointer;
+`;
+
+overlay.appendChild(bigImg);
+overlay.appendChild(closeBtn);
+document.body.appendChild(overlay);
+
+function closeViewer() {
+    overlay.style.display = "none";
+}
+
+overlay.onclick = function(e) {
+    if (e.target === overlay || e.target === closeBtn) {
+        closeViewer();
+    }
+};
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+        closeViewer();
+    }
+});
+
 images.forEach(src => {
     const img = document.createElement("img");
     img.src = src;
@@ -36,32 +92,9 @@ images.forEach(src => {
     img.loading = "lazy";
     img.style.cursor = "pointer";
 
-    img.addEventListener("click", function () {
-        const win = window.open("", "_blank");
-        win.document.write(`
-            <html>
-            <head>
-            <title>أعمال كهربائي عمر</title>
-            <style>
-                body{
-                    margin:0;
-                    background:#000;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    height:100vh;
-                }
-                img{
-                    max-width:95%;
-                    max-height:95%;
-                }
-            </style>
-            </head>
-            <body>
-                <img src="${src}">
-            </body>
-            </html>
-        `);
+    img.addEventListener("click", function() {
+        bigImg.src = src;
+        overlay.style.display = "flex";
     });
 
     gallery.appendChild(img);
