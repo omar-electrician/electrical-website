@@ -407,4 +407,27 @@ section h2{
 
 }
 
->>>>>>> 416f101bf8e39304b8933a4ffca309c1d57d77dc
+
+#faq{
+background:#fff;
+}
+
+.faq-item{
+background:#f8f8f8;
+padding:25px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.faq-item h3{
+color:#0d3b8e;
+margin-bottom:10px;
+font-size:28px;
+}
+
+.faq-item p{
+text-align:right;
+font-size:22px;
+line-height:2;
+}
