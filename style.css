@@ -149,7 +149,19 @@ footer{
     padding:25px;
     margin-top:50px;
 }
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
 
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+}
 @media(max-width:768px){
 
 header{
@@ -168,6 +180,10 @@ nav{
 
 .hero h3{
     font-size:20px;
+
+}
+.gallery{
+    grid-template-columns:repeat(2,1fr);
 }
 
 }
